@@ -16,5 +16,12 @@ class nmap{
 
 
     }
+
+    void nmap_verbose_scan(string url){
+        string command = "nmap -A"+url;
+        int result = system(command.c_str());
+        if (result == 0) {cout << "NMAP Scan Completed Successfully!"<< endl;}
+        else {cout << "NMAP Scan Failed!"<< endl;}
+    }
     #endif
 };
