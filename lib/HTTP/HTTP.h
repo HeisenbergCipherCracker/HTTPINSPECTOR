@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <curl/curl.h>
 
-#define LEVEL NULL
+#define LEVEL 1
 
 
 void send_http_req(const char* url){
