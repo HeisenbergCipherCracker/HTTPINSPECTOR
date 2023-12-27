@@ -41,3 +41,13 @@ void nmap_version_system_scan(const char* url){
         system(command);
     #endif
 }
+
+void nmap_strong_scan(const char* url){
+    #if LEVEL == 3
+        printf("Scanning %s\n", url);
+        char command[100];
+        sprintf(command, "nmap -sS %s", url);
+        system(command);
+    
+    #endif
+}
